@@ -16,7 +16,7 @@ namespace Tool.Crypt
         /// 加密方法
         /// </summary>
         /// <param name="plainText">需要加密数据源</param>
-        /// <param name="key">must length > 24 </param>
+        /// <param name="key">must length = 32 </param>
         /// <returns></returns>
         public static string Encrypt(string plainText, string key)
         {
@@ -48,7 +48,7 @@ namespace Tool.Crypt
 
                 return Convert.ToBase64String(array);
             }
-            catch
+            catch (Exception ex)
             {
                 return null;
             }
@@ -57,8 +57,8 @@ namespace Tool.Crypt
         /// <summary>
         /// 解密方法
         /// </summary>
-        /// <param name="plainText"></param>
-        /// <param name="key">must length >24 </param>
+        /// <param name="cipherText"></param>
+        /// <param name="key">must length = 32 </param>
         /// <returns></returns>
         public static string Decrypt(string cipherText, string key)
         {
