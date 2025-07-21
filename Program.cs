@@ -13,7 +13,7 @@ namespace Tool.Crypt
         const string OptionUpdateKey = "[yellow]修改密钥[/]";
         const string OptionRemoveKey = "[red]删除密钥[/]";
         const string OptionShutDown = "关闭程序";
-        const string inputKeyTip = "[yellow]请输入[bold]密钥[/][/], [grey]字符长度 32[/]:";
+        const string inputKeyTip = "[yellow]请输入[bold]密钥[/][/], [grey]字符长度32字符以上[/]:";
         const int inputKeyMinLength = 32;
 
         [STAThread]
